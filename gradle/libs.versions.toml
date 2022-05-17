@@ -1,0 +1,12 @@
+[versions]
+java = "17"
+
+[libraries]
+spring-boot-bom = "org.springframework.boot:spring-boot-dependencies:2.6.4"
+jackson-kotlin = "com.fasterxml.jackson.module:jackson-module-kotlin:2.13.3"
+
+[bundles]
+jackson = ["jackson-kotlin"]
+
+[plugins]
+kotlin-jvm = "org.jetbrains.kotlin.jvm:1.6.21"

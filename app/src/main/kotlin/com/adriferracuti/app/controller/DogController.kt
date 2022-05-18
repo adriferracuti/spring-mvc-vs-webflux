@@ -11,11 +11,9 @@ import java.time.Duration
 @RestController
 class DogController {
 
-    private val logger = KotlinLogging.logger { }
 
     @GetMapping("/dog")
     fun findOne(@RequestParam delay: Long): Mono<Dog> {
-        logger.info { "request arrived" }
         return Mono.just(Dog(2, "Bobby")).delayElement(Duration.ofMillis(delay))
     }
 }

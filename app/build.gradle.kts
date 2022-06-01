@@ -8,6 +8,7 @@ plugins {
 dependencies {
     implementation("org.apache.commons:commons-text")
     implementation(platform(libs.spring.boot.bom))
+    implementation("org.springframework.boot:spring-boot-starter-web") // remove to run webflux tests
     implementation("org.springframework.boot:spring-boot-starter-webflux")
     implementation("io.github.microutils:kotlin-logging:2.1.21")
     implementation("javax.servlet:javax.servlet-api:4.0.1")

@@ -9,4 +9,5 @@ jackson-kotlin = "com.fasterxml.jackson.module:jackson-module-kotlin:2.13.3"
 jackson = ["jackson-kotlin"]
 
 [plugins]
-kotlin-jvm = "org.jetbrains.kotlin.jvm:1.6.21"
+kotlin-jvm = "org.jetbrains.kotlin.jvm:1.7.0"
+gatling = "io.gatling.gradle:3.8.4"

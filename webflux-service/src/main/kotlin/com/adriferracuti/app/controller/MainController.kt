@@ -24,17 +24,17 @@ class MainController {
 
     private val logger = KotlinLogging.logger { }
 
-
-    @GetMapping("/webclient")
-    fun getOne(@RequestParam delay: Long): Mono<Dog>  {
+    @GetMapping("/execute")
+    fun getOne(@RequestParam delay: Long): Mono<Dog> {
         val count = counter.incrementAndGet()
         logger.info { "request $count | arrived" }
 
-        return webClient.get().uri("/dog?delay=$delay").retrieve().bodyToMono(Dog::class.java).doOnSuccess { logger.info { "request $count | maybe processed"} }
+        return webClient.get().uri("/dog?delay=$delay").retrieve().bodyToMono(Dog::class.java)
+            .doOnSuccess { logger.info { "request $count | maybe processed" } }
     }
 
-    @GetMapping("/sync")
-    fun getOneBlocking(@RequestParam delay: Long): String  {
+    @GetMapping("/execute-sync")
+    fun getOneBlocking(@RequestParam delay: Long): String {
         val count = counter.incrementAndGet()
         logger.info { "request $count | arrived" }
         val request = HttpRequest.newBuilder()
@@ -45,4 +45,3 @@ class MainController {
         return httpClient.send(request, HttpResponse.BodyHandlers.ofString()).body()
     }
 }
-

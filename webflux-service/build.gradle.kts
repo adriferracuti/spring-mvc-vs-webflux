@@ -2,18 +2,16 @@
 @Suppress("DSL_SCOPE_VIOLATION")
 plugins {
     id("com.adriferracuti.kotlin-application-conventions")
-    alias(libs.plugins.kotlin.jvm)
 }
 
 dependencies {
     implementation("org.apache.commons:commons-text")
     implementation(platform(libs.spring.boot.bom))
-    implementation("org.springframework.boot:spring-boot-starter-web") // remove to run webflux tests
     implementation("org.springframework.boot:spring-boot-starter-webflux")
-    implementation("io.github.microutils:kotlin-logging:2.1.21")
-    implementation("javax.servlet:javax.servlet-api:4.0.1")
+    implementation(libs.kotlin.logging)
     implementation(libs.bundles.jackson)
 }
+
 
 application {
     // Define the main class for the application.

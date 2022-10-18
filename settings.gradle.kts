@@ -10,5 +10,7 @@
 
 rootProject.name = "spring-mvc-vs-webflux"
 includeBuild("platform")
-include("app")
 include("gatling")
+include("dog-service")
+include("webflux-service")
+include("webmvc-service")

@@ -4,6 +4,7 @@ java = "17"
 [libraries]
 spring-boot-bom = "org.springframework.boot:spring-boot-dependencies:2.6.4"
 jackson-kotlin = "com.fasterxml.jackson.module:jackson-module-kotlin:2.13.3"
+kotlin-logging = "io.github.microutils:kotlin-logging:2.1.21"
 
 [bundles]
 jackson = ["jackson-kotlin"]

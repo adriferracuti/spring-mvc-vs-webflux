@@ -1,0 +1,10 @@
+{
+  "simulation": "com.adriferracuti.gatling.LoadTestingSimulation",
+  "simulationId": "loadtestingsimulation-20221018152656033",
+  "start": 1666106816922,
+  "description": "",
+  "scenarios": ["Delay"],
+  "assertions": [
+
+  ]
+}
